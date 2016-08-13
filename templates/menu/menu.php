@@ -1,41 +1,36 @@
 <?php
 class Menu
 {
+    var $language;
+    var $user;
+    var $theme;
     
-    
-    public function __construct($user)
+    public function __construct()
     {
      ?>
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse">
         <div class="container">
-            <a href="#" class="navbar-brand">Brand</a>
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <button type="button" class="btn btn-default">
-                        Sign up
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-default">
-                        Sign in
-                    </button>
-                </li>
-            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <?php
