@@ -9,7 +9,7 @@ class Menu
     {
      ?>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -21,10 +21,10 @@ class Menu
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
+                    <li class="active"><a href="/pages/Home/HomePage.php">Home</a></li>
+                    <li><a href="/pages/Application/applicationPage.php">Application</a></li>
+                    <li><a href="/pages/About%20Us/">About Us</a></li>
+                    <li><a href="/pages/Contact/">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -34,6 +34,12 @@ class Menu
         </div>
     </nav>
     <?php
+    }
+    
+    
+    public function show()
+    {
+        
     }
     
 }

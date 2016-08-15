@@ -1,7 +1,8 @@
 <?php
 
+$pathToRoot = $_SERVER['DOCUMENT_ROOT'];
 
-require("./templates/pages/informationPage.inc");
+require_once("$pathToRoot/templates/pages/informationPage.php");
 
 class HomePage extends informationPage
 {
@@ -9,10 +10,12 @@ class HomePage extends informationPage
    {
        $this->title = "Home Page";
        $this->keyWords = "forex,finance,script";
-
+       $this->content = "cokolwiek <br/><br/><br/><br/><br/><br/><br/>";
    }
 }
+
 $page = new HomePage();
 $page->show();
+
 
 ?>

@@ -4,7 +4,7 @@ class Footer
 {
     function __construct()
     {
-        echo "<div class=\"footer navbar-fixed-bottom\" style=\"background-color:black;text-align:center;\">Stopka z informacjami</div>\n";
+        echo "<div class=\"footer navbar-fixed-bottom\" style=\"background-color:black;text-align:center; color:white;\">Stopka z informacjami</div>\n";
     }
 }
     
