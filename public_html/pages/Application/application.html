@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <button type="button" class="btn btn-default btn-md" onclick="changeToStrategy()">
+                Strategia
+            </button>
+            <button type="button" class="btn btn-default btn-md" onclick="changeToInputIndicators()">
+                Wskazniki wejscia
+            </button>
+            <button type="button" class="btn btn-default btn-md" onclick="changeToOutputIndicators()">
+                Wskazniki wyjscia
+            </button>
+        </div>
+
+        <div class="panel-body" id="choosePanel" style="min-height:100px;">
+            <div id="strategy" style="display:none">
+                <h2>Choose Strategy</h2>
+                <div class="form-group" id="strategy-list">
+                    <label>Select list:</label>
+
+                    <select class="form-control">
+                        <!--        <option>1</option>-->
+                    </select>
+
+                </div>
+            </div>
+            <div id="input-indicators" style="display:none">
+                <h2>Choose input indicators</h2>
+
+                <div id="input-indicator-div"></div>
+
+                <div class="input-group-btn" id="input-indicator-chooser">
+                    <button class="btn btn-primary-toggle" type="button" data-toggle="dropdown">
+                        <label>Input Indicators</label>
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu indicators-option">
+
+                    </ul>
+
+                </div>
+            </div>
+            <div id="output-indicators" style="display:none">
+                <h2>Choose input indicators</h2>
+
+                <div id="output-indicator-div"></div>
+
+                <div class="input-group-btn" id="output-indicator-chooser">
+                    <button class="btn btn-primary-toggle" type="button" data-toggle="dropdown">
+                        <label>Output Indicators</label>
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu indicators-option">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
