@@ -1,0 +1,60 @@
+ [{
+         "name": "output1",
+         "properties": [{
+             "type": "number",
+             "name": "wlasciwosc1",
+             "range": [1, 2]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc2",
+             "range": [1, 2]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc3",
+             "range": [1, 2]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc4",
+             "range": [1, 2]
+		}]
+	}, {
+         "name": "output2",
+         "properties": [{
+             "type": "text",
+             "name": "wlasciwosc1",
+             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc5055",
+             "range": [1, 2]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc234234",
+             "range": [1, 2]
+		}, {
+             "type": "number",
+             "name": "wlasciwosc123123213",
+             "range": [1, 2]
+		}]
+    }, {
+         "name": "output3",
+         "properties": [{
+             "type": "text",
+             "name": "wlasciwosc1",
+             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+		}, {
+             "type": "text",
+             "name": "wlasciwosc1",
+             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+		}, {
+             "type": "text",
+             "name": "wlasciwosc1",
+             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+		}, {
+             "type": "text",
+             "name": "wlasciwosc1",
+             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+		}]
+    }
+
+ ]
