@@ -1,27 +1,48 @@
 function IndicatorsArrayController(indicatorsArray, $chooser, $indContainer) {
     this.$chooser = $chooser;
-
+    this.indicators = indicatorsArray;
+    this.indicatorsControllers = [];
     this.$indContainer = $indContainer;
+    this.INDICATOR_MAX_TIME_USED = 3;
 
-    this.indicatorsControllers = indicatorsArray.map(function (val) {
-        return new IndicatorController(val.name, val.properties);
-    });
 
-    this.addIndicatorsToChooser();
+    var that = this;
+    this.indicators.forEach(function (indicator) {
+        that.addIndicatorToChooser(indicator);
+    })
 
 }
 
-IndicatorsArrayController.prototype.addIndicatorsToChooser = function () {
-    var that = this;
-    this.indicatorsControllers.forEach(function (val) {
-        var $li = $('<li><a>' + val.indName + '</a></li>');
+IndicatorsArrayController.prototype.addIndicatorToChooser = function (indicator) {
+    var $li = $('<li><a>' + indicator.name + '</a></li>');
+    $li['timeUsed'] = 0;
 
-        $li.on('click', (function (indController, indContainer) {
-            return function () {
-                indContainer.append(indController.$element());
-                $(this).remove();
+    var that = this;
+    $li.on('click', function () {
+
+
+        // Do poprawienia - czytelność kodu 
+        var indController = new IndicatorController(indicator, indicator.name, indicator.properties, function () {
+
+            $li.timeUsed--;
+            if ($($li).is(":hidden")) {
+
+                $($li).show();
             }
-        })(val, that.$indContainer));
-        $(that.$chooser).children("ul.dropdown-menu").append($li);
+
+            $(indController.$element()).remove();
+            var indexToRemove = that.indicatorsControllers.indexOf(indController);
+            that.indicatorsControllers.splice(indexToRemove, 1);
+        });
+
+        that.indicatorsControllers.push(indController);
+        $(that.$indContainer).append(indController.$element());
+
+        $li.timeUsed++;
+
+        if ($li.timeUsed === that.INDICATOR_MAX_TIME_USED)
+            $(this).hide();
     });
+
+    that.$chooser.children("ul.dropdown-menu").append($li);
 }

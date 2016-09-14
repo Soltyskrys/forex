@@ -8,14 +8,6 @@
              "type": "number",
              "name": "wlasciwosc2",
              "range": [1, 2]
-		}, {
-             "type": "number",
-             "name": "wlasciwosc3",
-             "range": [1, 2]
-		}, {
-             "type": "number",
-             "name": "wlasciwosc4",
-             "range": [1, 2]
 		}]
 	}, {
          "name": "input2",
