@@ -2,31 +2,37 @@
          "name": "Moving Average",
          "properties": [{
              "type": "number",
-             "name": "wlasciwosc1",
-             "range": [1, 2]
+             "name": "Period",
+             "range": [2, 99],
+             "default_value":14
 		}, {
              "type": "number",
-             "name": "wlasciwosc2",
-             "range": [1, 2]
-		}]
-	}, {
-         "name": "input2",
-         "properties": [{
+             "name": "Shift",
+             "range": [0, 99],
+             "default_value":0
+		},{ 
              "type": "text",
-             "name": "wlasciwosc1",
-             "possible_values": ["raz", "dwa", "trzy", "cztery"]
+             "name": "MA method",
+             "possible_values": ["Simple", "Exponential", "Smoothed", "Linear-weighted"],
+             "default_value":"simple"
+          },{
+             "type": "text",
+             "name": "Apply to",
+             "possible_values": ["Close price", "Open price", "Maximum price", " Minimum price", "Median price","Typical price", "Average price"],
+             "default_value":"Close price"
+          }]
+	}, {
+         "name": "Parabolic SAR",
+         "properties": [{
+             "type": "number",
+             "name": "Step",
+             "range": [0, 10],
+             "default_value":0.02
 		}, {
              "type": "number",
-             "name": "wlasciwosc5055",
-             "range": [1, 2]
-		}, {
-             "type": "number",
-             "name": "wlasciwosc234234",
-             "range": [1, 2]
-		}, {
-             "type": "number",
-             "name": "wlasciwosc123123213",
-             "range": [1, 2]
+             "name": "Maximum",
+             "range": [0, 10],
+             "default_value":0.2
 		}]
     }, {
          "name": "input3",
