@@ -30,14 +30,19 @@ class ApplicationPage extends Page
          include('application.html');
          $this->showFooter();
          // add script responsible for application part
-        echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorController.js"></script>'."\n";
+         $this->showApplicationScripts();
+
+         echo '</body>'."\n".'</html>'."\n";
+     }
+    
+    function showApplicationScripts()
+    {
+         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorPropertyController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorsController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/StrategyController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/ApplicationController.js"></script>'."\n";
-
-         echo '</body>'."\n".'</html>'."\n";
-     }
+    }
     
 
     
