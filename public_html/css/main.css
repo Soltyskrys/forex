@@ -1,5 +1,26 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 30px;
+}
+
 #main_jumbotron {
     text-align: center;
     background-color: dimgray;
     max-height: 300;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
 }

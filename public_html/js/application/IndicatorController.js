@@ -1,9 +1,11 @@
-function IndicatorController(name, properties) {
-    this.indName = name;
+function IndicatorController(aIndicator, aName, aProperties, remove) {
+    this.indicator = aIndicator;
+    this.indName = aName;
     this.isUsed = false;
+    this.remove = remove;
 
 
-    this.propertiesControllers = properties.map(function (val) {
+    this.propertiesControllers = aProperties.map(function (val) {
         if (val.type === "number") {
             return new NumberPropertyController(val.name, val.range);
         } else if (val.type === "text") {
@@ -16,23 +18,27 @@ function IndicatorController(name, properties) {
 
 IndicatorController.prototype.$element = function () {
     if (this.$html === undefined) {
+        var cleanCol = $('<div class="col-md-2" style="text-align:center"/>');
         var $row = $('<div class="row" style="border-top:1px dashed"/>');
-        var $nameCol = $('<div class="col-md-2"/>');
 
-        $nameCol.append(this.indName);
+        var $nameCol = cleanCol.clone();
+
+
+        $nameCol.append('<h3>' + this.indName + '</h3>');
+        var $removeButton = $('<button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-minus"></span></button>');
+        $($removeButton).on('click', this.remove);
+
+        $nameCol.append($removeButton);
         $row.append($nameCol);
 
-
         this.propertiesControllers.forEach(function (val) {
-            var $propertyCol = $('<div class="col-md-2"></div>');
+            var $propertyCol = cleanCol.clone();
             $propertyCol.append(val.$element());
             $row.append($propertyCol);
+
         })
+
         this.$html = $row;
     }
     return this.$html;
-}
-
-IndicatorController.prototype.indName = function () {
-    return this.indName;
 }

@@ -12,28 +12,13 @@ function ApplicationController() {
         outputIndicatorController = new IndicatorsArrayController(data, $('#output-indicator-chooser'), $('#output-indicator-div'));
     });
 
-    $.getJSON("strategy.json", function (data) {
-        strategyController = new StrategyController(data, $('#strategy-list'));
-    });
+    this.strategyController = new StrategyController();
 }
 
-ApplicationController.prototype.changeToStrategy = function () {
+ApplicationController.prototype.showOnly = function (id) {
     $('#choosePanel').children().hide();
-    $('#strategy').show();
+    $('#' + id).show();
 }
-
-ApplicationController.prototype.changeToInputIndicators = function () {
-    $('#choosePanel').children().hide();
-    $('#input-indicators').show();
-}
-
-ApplicationController.prototype.changeToOutputIndicators = function () {
-    $('#choosePanel').children().hide();
-    $('#output-indicators').show();
-}
-
-
-
 
 /************Main Script*************************/
 var appController = new ApplicationController();

@@ -27,7 +27,7 @@ class ApplicationPage extends Page
          echo "</head>\n<body>\n";
          $this->showMenu();
          $this->showJumbotron();
-         include('application.html');
+         include('application.php');
          $this->showFooter();
          // add script responsible for application part
          $this->showApplicationScripts();
