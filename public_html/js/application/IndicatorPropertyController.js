@@ -31,7 +31,6 @@ NumberPropertyController.prototype.$element = function () {
     if (this.$DOMElement === undefined) {
         this.$DOMElement = $('<div class="form-group"/>');
         this.$DOMElement.append($('<label>' + this.name + '</label><br/>'));
-        this.$DOMElement.append($('<label>' + this.range[0] + '-' + this.range[1] + '</label>'));
         this.$DOMElement.append($('<input type="number"/>'));
     }
     return this.$DOMElement;
