@@ -1,22 +1,4 @@
-// ********************** Te funkcje przenieść do App Controllera
-function changeToStrategy() {
-    $('#choosePanel').children().hide();
-    $('#strategy').show();
-}
-
-function changeToInputIndicators() {
-    $('#choosePanel').children().hide();
-    $('#input-indicators').show();
-}
-
-function changeToOutputIndicators() {
-    $('#choosePanel').children().hide();
-    $('#output-indicators').show();
-}
-
-
-
-function ApllicationController() {
+function ApplicationController() {
 
     this.inputIndicatorController;
     this.outputIndicatorController;
@@ -33,8 +15,25 @@ function ApllicationController() {
     $.getJSON("strategy.json", function (data) {
         strategyController = new StrategyController(data, $('#strategy-list'));
     });
-
-
 }
 
-new ApllicationController();
+ApplicationController.prototype.changeToStrategy = function () {
+    $('#choosePanel').children().hide();
+    $('#strategy').show();
+}
+
+ApplicationController.prototype.changeToInputIndicators = function () {
+    $('#choosePanel').children().hide();
+    $('#input-indicators').show();
+}
+
+ApplicationController.prototype.changeToOutputIndicators = function () {
+    $('#choosePanel').children().hide();
+    $('#output-indicators').show();
+}
+
+
+
+
+/************Main Script*************************/
+var appController = new ApplicationController();

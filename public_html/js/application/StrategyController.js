@@ -1,16 +1,28 @@
-function StrategyController(strategies, $chooser) {
-    this.$chooser = $chooser;
-
-    this.strategies = strategies;
+function StrategyController() {
+    this.option1 = $('#option_1');
+    this.option2 = $('#option_2');
+    this.option3 = $('#option_3');
+    this.optionText = $('#input_option');
 
     var that = this;
-    strategies.forEach(function (val) {
-        that.addStrategy(val);
-    });
 
-}
+    this.option1.change(function () {
+        if ($(this).is(':checked')) {
 
-StrategyController.prototype.addStrategy = function (strategy) {
+            that.option2.attr('disabled', true);
+            that.option2.attr('checked', false);
+        } else {
+            that.option2.attr('disabled', false);
+        }
+    })
 
-    $(this.$chooser).find(".form-control").append($('<option>' + strategy.name + '</option>'));
+
+    this.option3.change(function () {
+        if ($(this).is(':checked')) {
+            that.optionText.hide();
+        } else {
+            that.optionText.show();
+        }
+    })
+
 }
