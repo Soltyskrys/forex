@@ -39,7 +39,7 @@ class ApplicationPage extends Page
     {
          echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorPropertyController.js"></script>'."\n";
-        echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorsController.js"></script>'."\n";
+        echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorsArrayController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/StrategyController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/ApplicationController.js"></script>'."\n";
     }

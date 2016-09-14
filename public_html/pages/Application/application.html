@@ -1,13 +1,13 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <button type="button" class="btn btn-default btn-md" onclick="changeToStrategy()">
+            <button type="button" class="btn btn-default btn-md" onclick="appController.changeToStrategy()">
                 Strategia
             </button>
-            <button type="button" class="btn btn-default btn-md" onclick="changeToInputIndicators()">
+            <button type="button" class="btn btn-default btn-md" onclick="appController.changeToInputIndicators()">
                 Wskazniki wejscia
             </button>
-            <button type="button" class="btn btn-default btn-md" onclick="changeToOutputIndicators()">
+            <button type="button" class="btn btn-default btn-md" onclick="appController.changeToOutputIndicators()">
                 Wskazniki wyjscia
             </button>
         </div>
@@ -15,14 +15,24 @@
         <div class="panel-body" id="choosePanel" style="min-height:100px;">
             <div id="strategy" style="display:none">
                 <h2>Choose Strategy</h2>
-                <div class="form-group" id="strategy-list">
-                    <label>Select list:</label>
-
-                    <select class="form-control">
-                        <!--        <option>1</option>-->
-                    </select>
-
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="option_1">Option1</label>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="option_2">Option 2</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="option_3">Option 3</label>
+                </div>
+                <input type="text" class="form-control" id="input_option" />
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">Option 4</label>
+                </div>
+
             </div>
             <div id="input-indicators" style="display:none">
                 <h2>Choose input indicators</h2>
