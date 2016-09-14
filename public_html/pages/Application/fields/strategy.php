@@ -2,11 +2,15 @@
     <h2>Choose Strategy</h2>
     <div class="checkbox">
         <label>
-            <input type="checkbox" id="option_1">Option1</label>
+            <input type="checkbox" id="use_takeProfit_stopLoss">I want to use Take Profit and/or Stop Loss</label>
     </div>
     <div class="checkbox">
         <label>
-            <input type="checkbox" id="option_2">Option 2</label>
+            <input type="checkbox" id="take_profit">Take Profit</label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="stop_loss">Stop Loss</label>
     </div>
     <div class="checkbox">
         <label>
