@@ -3,6 +3,7 @@ function ApplicationController() {
     this.inputIndicatorController;
     this.outputIndicatorController;
     this.strategyController;
+    this.summaryController;
 
     $.getJSON("inputIndicators.json", function (data) {
         inputIndicatorController = new IndicatorsArrayController(data, $('#input-indicator-chooser'), $('#input-indicator-div'));
@@ -13,11 +14,16 @@ function ApplicationController() {
     });
 
     this.strategyController = new StrategyController();
+    this.summaryController = new SummaryController();
 }
 
 ApplicationController.prototype.showOnly = function (id) {
     $('#choosePanel').children().hide();
     $('#' + id).show();
+}
+
+ApplicationController.prototype.generateScript = function () {
+    this.summaryController.generate();
 }
 
 /************Main Script*************************/

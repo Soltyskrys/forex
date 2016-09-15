@@ -37,7 +37,8 @@ class ApplicationPage extends Page
     
     function showApplicationScripts()
     {
-         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorController.js"></script>'."\n";
+        echo '<script src="'.$this->config['paths']['js'].'/application/SummaryController.js"></script>'."\n";
+        echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorPropertyController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/IndicatorsArrayController.js"></script>'."\n";
         echo '<script src="'.$this->config['paths']['js'].'/application/StrategyController.js"></script>'."\n";
